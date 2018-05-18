@@ -1,5 +1,5 @@
-# SSD: Single Shot MultiBox Object Detector, in PyTorch
-A [PyTorch](http://pytorch.org/) implementation of [Single Shot MultiBox Detector](http://arxiv.org/abs/1512.02325) from the 2016 paper by Wei Liu, Dragomir Anguelov, Dumitru Erhan, Christian Szegedy, Scott Reed, Cheng-Yang, and Alexander C. Berg.  The official and original Caffe code can be found [here](https://github.com/weiliu89/caffe/tree/ssd).
+# Repulsion Loss implemented with SSD
+Forked from [PyTorch-SSD](https://github.com/amdegroot/ssd.pytorch), which is a [PyTorch](http://pytorch.org/) implementation of [Single Shot MultiBox Detector](http://arxiv.org/abs/1512.02325) from the 2016 paper by Wei Liu, Dragomir Anguelov, Dumitru Erhan, Christian Szegedy, Scott Reed, Cheng-Yang, and Alexander C. Berg.  The official and original Caffe code can be found [here](https://github.com/weiliu89/caffe/tree/ssd).
 
 
 <img align="right" src= "https://github.com/amdegroot/ssd.pytorch/blob/master/doc/ssd.png" height = 400/>
@@ -102,12 +102,12 @@ You can specify the parameters listed in the `eval.py` file by flagging them or 
 
 ##### mAP
 
-| Original | Converted weiliu89 weights | From scratch w/o data aug | From scratch w/ data aug |
-|:-:|:-:|:-:|:-:|
-| 77.2 % | 77.26 % | 58.12% | 77.43 % |
+| Method | mAP | mAP on Crowd | 
+|:-:|:-:|:-:|
+| SSD | <b>77.52%</b> | 48.24% | 
+| SSD+RepGT | 77.43% | <b>50.12%</b> | 
 
-##### FPS
-**GTX 1060:** ~45.45 FPS
+
 
 ## Demos
 
@@ -157,17 +157,14 @@ We have accumulated the following to-do list, which we hope to complete in the n
   * [x] Support for the MS COCO dataset
   * [ ] Support for SSD512 training and testing
   * [ ] Support for training on custom datasets
+  * [ ] Support for RepBox term
+  * [ ] Support for selecting the second largest IoU from the same class
 
 ## Authors
 
-* [**Max deGroot**](https://github.com/amdegroot)
-* [**Ellis Brown**](http://github.com/ellisbrown)
-
-***Note:*** Unfortunately, this is just a hobby of ours and not a full-time job, so we'll do our best to keep things up to date, but no guarantees.  That being said, thanks to everyone for your continued help and feedback as it is really appreciated. We will try to address everything as soon as possible.
 
 ## References
+- Xinlong Wang, et al. "Repulsion Loss: Detecting Pedestrians in a Crowd." [CVPR2018](https://arxiv.org/abs/1711.07752).
 - Wei Liu, et al. "SSD: Single Shot MultiBox Detector." [ECCV2016]((http://arxiv.org/abs/1512.02325)).
-- [Original Implementation (CAFFE)](https://github.com/weiliu89/caffe/tree/ssd)
-- A huge thank you to [Alex Koltun](https://github.com/alexkoltun) and his team at [Webyclip](webyclip.com) for their help in finishing the data augmentation portion.
-- A list of other great SSD ports that were sources of inspiration (especially the Chainer repo):
-  * [Chainer](https://github.com/Hakuyume/chainer-ssd), [Keras](https://github.com/rykov8/ssd_keras), [MXNet](https://github.com/zhreshold/mxnet-ssd), [Tensorflow](https://github.com/balancap/SSD-Tensorflow)
+- [Pytorch-SSD](https://github.com/amdegroot/ssd.pytorch).
+- [Original Implementation (CAFFE)](https://github.com/weiliu89/caffe/tree/ssd).
