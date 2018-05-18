@@ -94,7 +94,9 @@ python eval.py
 You can specify the parameters listed in the `eval.py` file by flagging them or manually changing them.  
 
 
-<img align="left" src= "https://github.com/amdegroot/ssd.pytorch/blob/master/doc/detection_examples.png">
+<img align="left" src= "https://github.com/bailvwangzi/repulsion_loss_ssd/blob/master/doc/003534.jpg">
+<img align="left" src= "https://github.com/bailvwangzi/repulsion_loss_ssd/blob/master/doc/003534_repul.jpg">
+
 
 ## Performance
 
@@ -165,6 +167,6 @@ We have accumulated the following to-do list, which we hope to complete in the n
 
 ## References
 - Xinlong Wang, et al. "Repulsion Loss: Detecting Pedestrians in a Crowd." [CVPR2018](https://arxiv.org/abs/1711.07752).
-- Wei Liu, et al. "SSD: Single Shot MultiBox Detector." [ECCV2016]((http://arxiv.org/abs/1512.02325)).
+- Wei Liu, et al. "SSD: Single Shot MultiBox Detector." [ECCV2016](http://arxiv.org/abs/1512.02325).
 - [Pytorch-SSD](https://github.com/amdegroot/ssd.pytorch).
 - [Original Implementation (CAFFE)](https://github.com/weiliu89/caffe/tree/ssd).
