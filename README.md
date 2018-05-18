@@ -93,9 +93,14 @@ python eval.py
 
 You can specify the parameters listed in the `eval.py` file by flagging them or manually changing them.  
 
+## Example
+SSD:
 
-<img align="left" src= "https://github.com/bailvwangzi/repulsion_loss_ssd/blob/master/doc/003534.jpg">
-<img align="left" src= "https://github.com/bailvwangzi/repulsion_loss_ssd/blob/master/doc/003534_repul.jpg">
+![](doc/003534.jpg)
+
+SSD + repulsion loss：
+
+![](doc/003534_repul.jpg)
 
 
 ## Performance
